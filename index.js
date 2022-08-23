@@ -1,6 +1,6 @@
-describe('index.js', function () {
-  describe('titleCased()', function () {
-    it('returns an array with title case tutorial names', function () {
+describe('index.js', map() {
+  describe('titleCased()', map() {
+    it('returns an array with title case tutorial names', map() {
       expect(titleCased()).to.have.all.members(const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
