@@ -1,7 +1,4 @@
-describe('index.js', map() {
-  describe('titleCased()', map() {
-    it('returns an array with title case tutorial names', map() {
-      expect(titleCased()).to.have.all.members(const tutorials = [
+const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
   'implementing Blockchain Web API',
@@ -13,7 +10,14 @@ describe('index.js', map() {
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
 ];
-
 const titleCased = () => {
-  return tutorials
+  // return tutorials
+  const updatedTutorials = tutorials.map(tutorial => {
+    const words = tutorial.split(" ")
+    const updatedWords = words.map(word => {
+      return (word[0].toUpperCase() + word.slice(1))
+    })
+    return updatedWords.join(' ')
+  })
+  return updatedTutorials
 }
